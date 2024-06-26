@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { ProductCard } from './components/ProductCard';
 import { Products } from './components/Products';
 import CartContext from './context/CartContext';
+import { SearchBar } from './components/Search';
 
 function App() {
   let [cartData, setCartData] = useState({});
@@ -62,9 +63,10 @@ function App() {
     <div className="App">
       {/* <header className="App-header"> */}
         <img src={logo} className="App-logo" alt="logo" />
-        <CartContext.Provider value={{ cartData, addProductToCart, removeProductFromCart, incrementProductQty, decrementProductQty }}>
+        <SearchBar />
+        {/* <CartContext.Provider value={{ cartData, addProductToCart, removeProductFromCart, incrementProductQty, decrementProductQty }}>
            <Products />
-        </CartContext.Provider>
+        </CartContext.Provider> */}
       {/* </header> */}
     </div>
   );
